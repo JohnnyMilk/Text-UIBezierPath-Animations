@@ -54,8 +54,8 @@ class AnimationView: UIView {
             
             for i in 0..<CTRunGetGlyphCount(singleGlyphBits) {
                 let range = CFRangeMake(i, 1)
-                let glyph:UnsafeMutablePointer<CGGlyph> = UnsafeMutablePointer<CGGlyph>.allocate(capacity: 1)
-                let position:UnsafeMutablePointer<CGPoint> = UnsafeMutablePointer<CGPoint>.allocate(capacity: 1)
+                let glyph: UnsafeMutablePointer<CGGlyph> = UnsafeMutablePointer<CGGlyph>.allocate(capacity: 1)
+                let position: UnsafeMutablePointer<CGPoint> = UnsafeMutablePointer<CGPoint>.allocate(capacity: 1)
                 glyph.initialize(to: 0)
                 position.initialize(to: .zero)
                 CTRunGetGlyphs(singleGlyphBits, range, glyph)
